@@ -8,7 +8,7 @@ title: Home
 {% if notes | length %}
   {% for faculty in notes %}
     {% set courses = notes[faculty] %}
-    <section style="margin-bottom: 2rem;">
+    <section id="{{ faculty }}" style="margin-bottom: 2rem;">
       <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: #777; margin-bottom: 0.75rem;">{{ faculty }}</h3>
       <ul style="list-style: none; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden;">
         {% for course in courses %}

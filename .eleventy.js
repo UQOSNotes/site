@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("public");
+  // Copy public/notes/ → _site/notes/ so PDFs are served at /notes/…
+  eleventyConfig.addPassthroughCopy({ "public/notes": "notes" });
 
   return {
     dir: {
