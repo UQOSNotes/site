@@ -4,12 +4,14 @@ name: Build and Deploy Site
 on:
   workflow_dispatch:  # triggered manually if needed
   push:
-    branches: [main]
+    branches: 
+      - main
     paths:
-      - 'src/**'
+      - '.github/workflows/**/*'
+      - 'src/**/*'
       - '.eleventy.js'
       - 'package.json'
-      - 'public/notes/**'
+      - 'public/notes/**/*'
 
 permissions:
   contents: read
